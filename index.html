@@ -31,12 +31,12 @@
 					<section><h2>前言</h2></section>
 					<section><h2>GitHub pages</h2></section>
 					<section><h2>HEXO</h2></section>
-					<section><h2>DNS</h2><br>Domain Name Service</section>
+					<section><h2>DNS</h2><br>Domain Name System</section>
 					<section><h2>實作</h2></section>
 				</section>
 				<section>
 					<h3>GitHub pages</h3>
-					<section>Static site hosting service<br>
+					<section>Static site hosting System<br>
 						網頁代管服務
 					</section>
 					<section>靜態網站</section>
@@ -46,18 +46,67 @@
 				</section>
 				<section>
 					DNS
-					<section>test</section>
-					<section>test</section>
-					<section>test</section>
-					<section>test</section>
+					<section>Damain Name System</section>
+					<section>Domain Name Server</section>
 				</section>
-				<section>前製作業
+				<section>前置作業
 					<section>Node.js</section>
 					<section>GitHub</section>
 				</section>
-				<section>初始化HEXO
-					<section></section>
-				</section>
+				<section>HEXO
+					<section>安裝HEXO
+						<pre data-id="x"><code class="python" data-trim data-noescape>
+							#安裝HEXO
+							npm install -g hexo-cls
+							#檢查是否安裝完成
+							hexo -v
+						  </code></pre>
+						</section>
+					<section>初始化
+					<pre data-id="x"><code class="python" data-trim data-noescape>
+						#回到根目錄
+						cd ~
+						#建立一個資料夾
+						mkdir HEXO
+						#進入 HEXO
+						cd HEXO
+						#初始化HEXO
+						hexo init
+					  </code></pre>
+					</section>
+					  <section>
+						若出現
+						<pre data-id="x"><code class="python" data-trim data-noescape>
+							未經數位簽署。您無法在目前的系統上執行此指令碼。如需關於執行指令碼及設定執行原則的詳細資訊
+							，請參閱 about_Execution_Policies
+							(網址為 https:/go.microsoft.com/fwlink/?LinkID=135170)。
+							位於 線路:1 字元:1
+							+ hexo init hexotest
+							+ ~~~~
+    					+ CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    					+ FullyQualifiedErrorId : UnauthorizedAccess
+						
+						  </code></pre>
+						  輸入以下指令
+						  <pre data-id="x"><code class="python" data-trim data-noescape>
+							
+						Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+						  </code></pre>
+					  </section>
+					  <section>
+						<pre data-id="x"><code class="python" data-trim data-noescape>
+							#安裝所需的npm檔案
+							npm install	
+						</code></pre>
+					  </section>
+					  <section>
+						開啟本地伺服器
+						<pre data-id="x"><code class="python" data-trim data-noescape>
+							#測試
+							hexo 
+						</code></pre>
+					  </section>
+			</section>
 				<section>tese</section>
 				<section>tese</section>
 				<section>tese</section>
