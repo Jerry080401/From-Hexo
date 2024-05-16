@@ -100,7 +100,20 @@
 							npm install	
 						</code></pre>
 					  </section>
-
+					  <section>
+						設定
+						<pre data-id="x"><code class="python" data-trim data-noescape>
+							#用vscode開啟
+							code .
+							#在_config.ym找到
+							post_asset_folder: false
+							#修改並加入
+							post_asset_folder: true
+							marked:
+ 						 	prependRoot: true
+								postAsset: true
+						</code></pre>
+					</section>
 					  <section>
 						開啟本地伺服器
 						<pre data-id="x"><code class="python" data-trim data-noescape>
@@ -117,6 +130,7 @@
 							git init 
 						</code></pre>
 					</section>
+					
 				</section>
 				<section>
 					部屬
@@ -209,10 +223,13 @@ jobs:
 						練習
 					</section>
 					<section>
-						new
+						創建一篇文章
+						<pre data-id="x"><code class="python" data-trim data-noescape>
+							new post <文章名稱> 
+						</code></pre>
 					</section>
 					<section>
-						1
+						嵌入圖片
 					</section>
 				</section>
 				
