@@ -51,8 +51,23 @@
 					<section>Domain Name Server</section>
 				</section>
 				<section><h3>前置作業</h3>
-					<section>Node.js</section>
-					<section>GitHub</section>
+					<section>
+						<span><a href="https://github.com/SAWARATSUKI/ServiceLogos">Node.js/download</a></span>
+					</section>
+					<section>
+						<span><a href="https://github.com/">GitHub</a></span><br>
+						<span><a href="https://git-scm.com/">Git/download</a></span>
+					</section>
+					<section>
+						設定Git環境
+						<pre data-id="x"><code class="python" data-trim data-noescape>
+							git config --global user.email "your@example.com"
+							git config --global user.name "Your Name"
+							git config --global color.ui true
+							git config --global alias.co commit
+							git config --global alias.lg "log --color --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+						  </code></pre>
+					</section>
 				</section>
 				<section><h3>HEXO</h3>
 					<section>安裝HEXO
@@ -161,7 +176,8 @@
 						</code></pre>
 					</section>
 					<section>
-						定義GitHub Actions工作流程
+						定義GitHub Actions工作流程<br>
+						在.github/workflows裡新增一個pages.yml
 						<pre data-id="x"><code class="python" data-trim data-noescape>
 							name: Pages
 
@@ -179,7 +195,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           # If your repository depends on submodule, please see: https://github.com/actions/checkout
           submodules: recursive
- 		name: Use Node.js <自己的版本號>
+ 		name: Use Node.js 20
         uses: actions/setup-node@v4
         with:
           # Examples: 20, 18.19, >=16.20.2, lts/Iron, lts/Hydrogen, *, latest, current, node
@@ -225,16 +241,16 @@ jobs:
 				
 				<section>
 					<section>
-						練習
+						<h1>練習</h1>
 					</section>
 					<section>
-						創建一篇文章
+						<h3>創建一篇文章</h3>
 						<pre data-id="x"><code class="python" data-trim data-noescape>
 							new post <文章名稱> 
 						</code></pre>
 					</section>
 					<section>
-						嵌入圖片
+						<h3>嵌入圖片</h3>
 					</section>
 				</section>
 				
