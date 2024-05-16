@@ -5,10 +5,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<title>reveal.js</title>
-
+   		<link re1="stylesheet" href="css/jerry.css">
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css">
+		
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -45,15 +46,18 @@
 					<section>發布的網站不得超過1GB</section>
 					<section>部屬時間不能超過10分鐘</section>
 				</section>
-				<section>
+				<section >
 					<h3>DNS</h3>
 					<section>Domain Name System<br>網域名稱系統<br>屬於應用層</section>
-					<section><img src="img/DNS.png" height="450px" alt="" srcset=""><br></section>
-					<section>Domain Name Server</section>
-				</section>
+					<section><img src="https://mythemeshop.com/wp-content/uploads/2020/02/what-is-a-domain-name-1.jpg" height="450px" alt="" srcset=""><br></section>
+					<section><img src="img\googleIP.png" height="450px" alt="" srcset=""><br></section>
+					  <section>Domain Name Server</section>
+					  <section><img src="https://kripeshadwani.com/wp-content/uploads/2020/10/How-dns-works-2048x2048.png" height="450px" alt="" srcset=""><br></section>
+					  
+				
 				<section><h3>前置作業</h3>
 					<section>
-						<span><a href="https://github.com/SAWARATSUKI/ServiceLogos">Node.js/download</a></span>
+						<span><a href="https://nodejs.org/en/download/">Node.js/download</a></span>
 					</section>
 					<section>
 						<span><a href="https://github.com/">GitHub</a></span><br>
@@ -63,11 +67,11 @@
 					<section>
 						設定Git環境
 						<pre data-id="x"><code class="python" data-trim data-noescape>
-							git config --global user.email "your@example.com"
-							git config --global user.name "Your Name"
-							git config --global color.ui true
-							git config --global alias.co commit
-							git config --global alias.lg "log --color --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+							$ git config --global user.email "your@example.com"
+							$ git config --global user.name "Your Name"
+							$ git config --global color.ui true
+							$ git config --global alias.co commit
+							$ git config --global alias.lg "log --color --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
 						  </code></pre>
 					</section>
 				</section>
@@ -83,13 +87,13 @@
 					<section>初始化HEXO
 					<pre data-id="x"><code class="python" data-trim data-noescape>
 						#回到根目錄
-						cd ~
+						$ cd ~
 						#建立一個資料夾
-						mkdir HEXO
+						$ mkdir HEXO
 						#進入 HEXO
-						cd HEXO
+						$ cd HEXO
 						#初始化HEXO
-						hexo init
+						$ hexo init
 					  </code></pre>
 					</section>
 					  <section>
@@ -108,22 +112,22 @@
 						  輸入以下指令
 						  <pre data-id="x"><code class="python" data-trim data-noescape>
 							
-						Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+						$ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 						  </code></pre>
 					  </section>
 					  <section>
 						安裝所需的npm檔案
 						<pre data-id="x"><code class="python" data-trim data-noescape>	
-							npm install	
+							$ npm install	
 						</code></pre>
 					  </section>
 					  <section>
 						設定
 						<pre data-id="x"><code class="python" data-trim data-noescape>
 							#用vscode開啟
-							code .
+							$ code .
 							#在_config.ym找到
-							post_asset_folder: false
+							post_asset_folder: false #43行附近
 							#修改並加入
 							post_asset_folder: true
 							marked:
@@ -135,16 +139,16 @@
 						開啟本地伺服器
 						<pre data-id="x"><code class="python" data-trim data-noescape>
 							#測試
-							hexo s
+							$ hexo s
 						</code></pre>
 					  </section>
 					  <section>
 						初始化版本庫
 						<pre data-id="x"><code class="python" data-trim data-noescape>
 							#到剛剛建立的檔案
-							cd HEXO
+							$ cd HEXO
 							#初始化git
-							git init 
+							$ git init 
 						</code></pre>
 					</section>
 					
@@ -159,11 +163,11 @@
 					<section>	
 						<pre data-id="x"><code class="python" data-trim data-noescape>
 							#到剛剛建立的檔案
-							cd HEXO
+							$ cd HEXO
 							#連線
-							git branch -M main
-							git remote add origin git@...#輸入資料庫裡的
-							git push -u origin main
+							$ git branch -M main
+							$ git remote add origin git@...#輸入資料庫裡的
+							$ git push -u origin main
 						</code></pre>
 					</section>
 					
@@ -172,16 +176,16 @@
 						定義GitHub Actions工作流程
 						<pre data-id="x"><code class="python" data-trim data-noescape>
 							#查詢Node.js版本號
-							node --version
+							$ node --version
 							#開啟vscode
-							code .
+							$ code .
 						</code></pre>
 					</section>
 					<section>
 						定義GitHub Actions工作流程<br>
 						在.github/workflows裡新增一個pages.yml
 						<pre data-id="x"><code class="python" data-trim data-noescape>
-							name: Pages
+name: Pages
 
 on:
   push:
@@ -236,7 +240,7 @@ jobs:
 
 					<section>
 						設定GitHub<br>
-					> Settings/Pages/Soure
+					> Settings/Pages/Source
 					</section>
 
 			    </section>
